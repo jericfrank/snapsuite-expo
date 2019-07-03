@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
   },
   checkBoxStyle: {
     marginTop: 10,
+  },
+  rightText: {
+    color: '#ffffff'
   }
 });
 
@@ -66,6 +69,7 @@ const SelectionCard = ({ title, color, boxColor, options }) => {
         checkBoxColor='#777777'
         onClick={() => {}}
         rightText='Work being done by contractor'
+        rightTextStyle={styles.rightText}
       />
       <CheckBox
         style={styles.checkBoxStyle}
@@ -73,6 +77,7 @@ const SelectionCard = ({ title, color, boxColor, options }) => {
         checkBoxColor='#777777'
         onClick={() => {}}
         rightText='Emergency job'
+        rightTextStyle={styles.rightText}
       />
     </Card>
   );
