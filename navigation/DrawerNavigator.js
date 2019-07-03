@@ -9,6 +9,7 @@ import SettingsScreen from "../screens/SettingsScreen";
 import SideBar from "../components/SideBar";
 import Home from "../screens/home/Home.js";
 import ProjectList from "../screens/projects/ProjectList.js";
+import ProjectDetails from "../screens/projects/ProjectDetails";
 
 const HomeStack = createStackNavigator({
   //Home: Home
@@ -17,7 +18,15 @@ const HomeStack = createStackNavigator({
     navigationOptions: {
       header: null
     }
+  },
+  ProjectDetails: {
+    screen: ProjectDetails,
+    navigationOptions: {
+      header: null
+    },
   }
+},{
+  mode: 'modal',
 });
 
 const LinksStack = createStackNavigator({
@@ -32,7 +41,7 @@ export default createDrawerNavigator(
   {
     Home: HomeStack,
     Links: LinksStack,
-    Settings: SettingsStack
+    Settings: SettingsStack,
   },
   {
     contentComponent: props => <SideBar {...props} />

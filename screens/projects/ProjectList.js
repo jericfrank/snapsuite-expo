@@ -7,9 +7,7 @@ import { FlatList } from "react-native-gesture-handler";
 export default class ProjectList extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      showDetails: false,
-    };
+    this.state = {};
   }
 
   componentDidMount() {
@@ -19,7 +17,7 @@ export default class ProjectList extends Component {
   //   _renderItem = ({ item }) => <ProjectList />;
 
   render() {
-    const { showDetails } = this.state;
+    const {navigation} = this.props;
     return (
       <ImageBackground
         source={require("../../assets/images/app-background.jpg")}
@@ -28,7 +26,7 @@ export default class ProjectList extends Component {
         <View>
           <ProjectListHeader />
           <ProjectListItem
-            onPressDetails={() => this.setState({ showDetails: !showDetails }) }
+            onPressDetails={() => navigation.navigate('ProjectDetails')}
           />
           {/* <FlatList data={["a,b,c,d,e"]} renderItem={this._renderItem} /> */}
         </View>
