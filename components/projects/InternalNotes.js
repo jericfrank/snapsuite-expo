@@ -27,7 +27,7 @@ const noteStyles = StyleSheet.create({
     backgroundColor: '#5d2483'
   },
   textDetails: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#ffffff',
   },
   editIcon: {
