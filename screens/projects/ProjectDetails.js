@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, ImageBackground } from 'react-native';
+import { StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import { View } from 'native-base';
 
 import SelectionCard from '../../components/projects/SelectionCard';
+import InternalNotes from '../../components/projects/InternalNotes';
 
 const imgSource = require('../../assets/images/app-background.jpg');
 
@@ -47,20 +48,23 @@ class ProjectDetails extends Component {
         source={ imgSource }
         style={ styles.imgBackground }
       >
-        <View style={ styles.contentWrapper }>
-          <SelectionCard
-            title='Status'
-            color='#68c374'
-            boxColor='#3f7c46'
-            options={ statusOptions }
-          />
-          <SelectionCard
-            title='Job Type'
-            color='#5d2483'
-            boxColor='#ffffff'
-            options={ jobOptions }
-          />
-        </View>
+        <ScrollView>
+          <View style={ styles.contentWrapper }>
+            <SelectionCard
+              title='Status'
+              color='#68c374'
+              boxColor='#3f7c46'
+              options={ statusOptions }
+            />
+            <SelectionCard
+              title='Job Type'
+              color='#5d2483'
+              boxColor='#ffffff'
+              options={ jobOptions }
+            />
+            <InternalNotes title='Internal Notes' />
+          </View>
+        </ScrollView>
       </ImageBackground>
     );
   }
