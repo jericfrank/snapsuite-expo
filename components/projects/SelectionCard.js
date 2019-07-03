@@ -29,6 +29,16 @@ const pickerSelectStyles = StyleSheet.create({
     color: 'black',
     paddingRight: 30,
   },
+  inputAndroid: {
+    fontSize: 16,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderWidth: 0.5,
+    borderColor: '#cecece',
+    backgroundColor: '#ffffff',
+    color: 'black',
+    paddingRight: 30, // to ensure the text is never behind the icon
+  },
 });
 
 const SelectionCard = ({ title, color, boxColor, options }) => {
