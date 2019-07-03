@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   logButton: {
+    fontWeight: 'bold',
     color: '#5d2483'
   },
 });
@@ -41,7 +42,7 @@ const NoteItem = ({ description, date }) => (
     </View>
     <View style={styles.headerDetail}>
       <Text style={noteStyles.editIcon}>
-        <MaterialCommunityIcons name='square-edit-outline' size={12} color='#ffffff' /> EDIT
+        <MaterialCommunityIcons name='square-edit-outline' size={18} color='#ffffff' /> EDIT
       </Text>
       <Text style={noteStyles.textDetails}>{date}</Text>
     </View>
