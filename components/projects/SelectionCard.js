@@ -55,12 +55,12 @@ const SelectionCard = ({ title, color, boxColor, options }) => {
         style={{
           ...pickerSelectStyles,
           iconContainer: {
-            top: 12,
+            top: 15,
             right: 12,
           },
         }}
         useNativeAndroidPickerStyle={false}
-        Icon={() => <AntDesign name='caretdown' size={18} color='gray' />}
+        Icon={() => <AntDesign name='caretdown' size={12} color='gray' />}
       />
       <CheckBox
         isChecked
